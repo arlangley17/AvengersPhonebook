@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Hello New User!</h1>
+<h6>Please fill out the registration form below. If you are already a member, please click log in.</h6>
+<form action="" method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        <fieldset>
+            {{ form.first_name.label }}
+            {{ form.first_name(class='form-control', placeholder='First Name') }}
+        </fieldset>
+        <fieldset>
+            {{ form.last_name.label }}
+            {{ form.last_name(class='form-control', placeholder='Last Name') }}
+        </fieldset>
+        <fieldset>
+            {{ form.avenger_name.label }}
+            {{ form.avenger_name(class='form-control', placeholder='Avenger Name') }}
+        </fieldset>
+        <fieldset>
+            {{ form.phone_num.label }}
+            {{ form.phone_num(class='form-control', placeholder='Phone Number') }}
+        </fieldset>
+        <fieldset>
+            {{ form.address.label }}
+            {{ form.address(class='form-control', placeholder='Address') }}
+        </fieldset>
+        <fieldset>
+            {{ form.email.label }}
+            {{ form.email(class='form-control', placeholder= 'Email') }}
+        </fieldset> 
+        <fieldset>
+            {{ form.password.label }}
+            {{ form.password(class='form-control', placeholder= 'Password') }}
+        </fieldset> 
+        <fieldset>
+            {{ form.confirm_password.label }}
+            {{ form.confirm_password(class='form-control', placeholder='Confirm Password') }}
+        </fieldset>
+        {{ form.submit(class='btn btn-success') }}
+    </div>
+</form>
+
+
+{% endblock content %}
